@@ -1,0 +1,21 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.24",
+	"Category": "Samples",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "VrProjectCollege",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"TargetPlatforms": [
+		"WindowsNoEditor",
+		"MacNoEditor"
+	],
+	"EpicSampleNameHash": "2118947570"
+}
