@@ -17,6 +17,8 @@ Unreal Engine 4 is a complete suite of development tools made for anyone working
                                                 What I will be using?
                                                 
 ![](VRimages/titleShadow-1024x341.png)
+C++ is a high-level programming language developed by Bjarne Stroustrup at Bell Labs. C++ adds object-oriented features to its predecessor, C. C++ is one of the most popular programming language for graphical applications, such as those that run in Windows and Macintosh environments.
+
 ![](VRimages/image_31202.jpg)
   
 I will be using C++ and blueprints to build my Environment for the VR experience.
