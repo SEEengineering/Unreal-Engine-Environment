@@ -16,7 +16,7 @@ Unreal Engine 4 is a complete suite of development tools made for anyone working
 
                                                 What I will be using?
                                                 
-![](VRimages/1200px-ISO_C++_Logo.svg.png)
+![](VRimages/titleShadow-1024x341.png)
 ![](VRimages/image_31202.jpg)
   
 I will be using C++ and blueprints to build my Environment for the VR experience.
