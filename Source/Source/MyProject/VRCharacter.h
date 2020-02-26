@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/PlayerController.h"
+#include "HandController.h"
 #include "VRCharacter.generated.h"
 
 
@@ -35,8 +36,14 @@ private:
 	
 	void DrawTeleportPath(const TArray<FVector> &Path);
 	void UpdateSpline(const TArray<FVector> &Path);
+
 	void MoveForward(float throttle);
 	void MoveRight(float throttle);
+
+	void GripLeft() { LeftController->Grip(); }
+	void ReleaseLeft() { LeftController->Release(); }
+	void GripRight() { RightController->Grip(); }
+	void ReleaseRight() { RightController->Release(); }
 
 	void BeginTeleport();
 	void FinishTeleport();
@@ -51,10 +58,10 @@ private:
 		class UCameraComponent* Camera;
 
 	UPROPERTY(VisibleAnywhere)
-		class UMotionControllerComponent* LeftController;
+		class AHandController* LeftController;
 
 	UPROPERTY(VisibleAnywhere)
-		class UMotionControllerComponent* RightController;
+		class AHandController* RightController;
 
 	UPROPERTY(VisibleAnywhere)
 		class USceneComponent* VRRoot;
@@ -66,9 +73,9 @@ private:
 		class UStaticMeshComponent* DestinationMarker;
 
 	UPROPERTY(VisibleAnywhere)
-		 TArray<class UStaticMeshComponent*> TeleportPathMeshPool;
+		 TArray<class USplineMeshComponent*> TeleportPathMeshPool;
 
-private:
+private:// Configuration parameters
 
 
 	UPROPERTY(EditAnywhere)
@@ -91,6 +98,11 @@ private:
 
 	UPROPERTY(EditDefaultsOnly)
 		class UMaterialInterface* TeleportArchMaterial;
+
+	UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<AHandController> HandControllerClass;
+
+
 
 
 };
